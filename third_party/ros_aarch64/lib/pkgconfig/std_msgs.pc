@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: std_msgs
+Description: Description of std_msgs
+Version: 0.5.10
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib 
+Requires: message_runtime

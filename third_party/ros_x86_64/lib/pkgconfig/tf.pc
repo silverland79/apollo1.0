@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: tf
+Description: Description of tf
+Version: 1.11.8
+Cflags: -I/apollo/third_party/ros_x86_64/include
+Libs: -L/apollo/third_party/ros_x86_64/lib -ltf
+Requires: geometry_msgs message_filters message_runtime roscpp sensor_msgs std_msgs tf2_ros rosconsole

@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: rosunit
+Description: Description of rosunit
+Version: 1.11.14
+Cflags: 
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: 

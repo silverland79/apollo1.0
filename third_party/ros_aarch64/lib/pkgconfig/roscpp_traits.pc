@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: roscpp_traits
+Description: Description of roscpp_traits
+Version: 0.5.8
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib 
+Requires: cpp_common rostime

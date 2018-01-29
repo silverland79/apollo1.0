@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: rosgraph_msgs
+Description: Description of rosgraph_msgs
+Version: 1.11.2
+Cflags: -I/apollo/third_party/ros_x86_64/include
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: message_runtime std_msgs

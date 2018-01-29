@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: nodelet
+Description: Description of nodelet
+Version: 1.9.10
+Cflags: -I/apollo/third_party/ros_x86_64/include -I/usr/include
+Libs: -L/apollo/third_party/ros_x86_64/lib -lnodeletlib -l:/usr/lib/x86_64-linux-gnu/libuuid.so
+Requires: bondcpp message_runtime pluginlib rosconsole roscpp std_msgs

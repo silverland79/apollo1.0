@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: genlisp
+Description: Description of genlisp
+Version: 0.4.15
+Cflags: 
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib 
+Requires: genmsg

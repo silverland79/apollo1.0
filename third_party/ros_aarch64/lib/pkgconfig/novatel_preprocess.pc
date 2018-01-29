@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: novatel_preprocess
+Description: Description of novatel_preprocess
+Version: 0.0.0
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib 
+Requires: roscpp rospy std_msgs novatel_msgs eigen_conversions tf tf2_ros nodelet

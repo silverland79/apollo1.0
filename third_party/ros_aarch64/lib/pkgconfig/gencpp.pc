@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: gencpp
+Description: Description of gencpp
+Version: 0.5.5
+Cflags: 
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib 
+Requires: genmsg

@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: genlisp
+Description: Description of genlisp
+Version: 0.4.15
+Cflags: 
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: genmsg

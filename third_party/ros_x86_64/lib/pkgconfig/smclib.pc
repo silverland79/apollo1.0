@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: smclib
+Description: Description of smclib
+Version: 1.7.19
+Cflags: -I/apollo/third_party/ros_x86_64/include
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: 

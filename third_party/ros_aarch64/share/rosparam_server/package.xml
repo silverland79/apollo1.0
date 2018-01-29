@@ -1,0 +1,18 @@
+<package>
+  <name>rosparam_server</name>
+  <version>1.11.21</version>
+  <description>
+    ros param server instance.
+  </description>
+  <maintainer email="zhanglei30@baidu.com"> hill </maintainer>
+  <license>BSD</license>
+
+  <url> </url>
+  <author></author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <build_depend>roscpp</build_depend>
+
+  <run_depend>roscpp</run_depend>
+</package>

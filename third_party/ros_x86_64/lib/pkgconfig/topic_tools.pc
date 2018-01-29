@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: topic_tools
+Description: Description of topic_tools
+Version: 1.11.21
+Cflags: -I/apollo/third_party/ros_x86_64/include
+Libs: -L/apollo/third_party/ros_x86_64/lib -ltopic_tools
+Requires: message_runtime rosconsole roscpp std_msgs xmlrpcpp

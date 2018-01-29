@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: xmlrpcpp
+Description: Description of xmlrpcpp
+Version: 1.11.21
+Cflags: -I/apollo/third_party/ros_x86_64/include
+Libs: -L/apollo/third_party/ros_x86_64/lib -lxmlrpcpp
+Requires: cpp_common

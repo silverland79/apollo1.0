@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: pluginlib
+Description: Description of pluginlib
+Version: 1.10.5
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include -I/usr/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib -l:/usr/lib/aarch64-linux-gnu/libboost_filesystem.so -l:/usr/lib/aarch64-linux-gnu/libboost_system.so -l:/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib/libtinyxml.so
+Requires: class_loader rosconsole roslib

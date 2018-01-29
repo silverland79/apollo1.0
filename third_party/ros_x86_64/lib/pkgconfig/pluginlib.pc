@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: pluginlib
+Description: Description of pluginlib
+Version: 1.10.5
+Cflags: -I/apollo/third_party/ros_x86_64/include -I/usr/include
+Libs: -L/apollo/third_party/ros_x86_64/lib -l:/usr/lib/x86_64-linux-gnu/libboost_filesystem.so -l:/usr/lib/x86_64-linux-gnu/libboost_system.so -l:/usr/lib/x86_64-linux-gnu/libtinyxml.so
+Requires: class_loader rosconsole roslib

@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: class_loader
+Description: Description of class_loader
+Version: 0.3.6
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include -I/usr/include -I/usr/local/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib -lclass_loader -l:/usr/lib/aarch64-linux-gnu/libboost_thread.so -l:/usr/lib/aarch64-linux-gnu/libboost_system.so -l:/usr/lib/aarch64-linux-gnu/libboost_chrono.so -l:/usr/lib/aarch64-linux-gnu/libboost_date_time.so -l:/usr/lib/aarch64-linux-gnu/libboost_atomic.so -l:/usr/lib/aarch64-linux-gnu/libpthread.so -l:/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib/libPocoFoundation.so -ldl -l:/usr/local/lib/libconsole_bridge.so
+Requires: 

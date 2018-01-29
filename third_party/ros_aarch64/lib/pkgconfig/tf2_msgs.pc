@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: tf2_msgs
+Description: Description of tf2_msgs
+Version: 0.5.13
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib 
+Requires: message_generation geometry_msgs actionlib_msgs

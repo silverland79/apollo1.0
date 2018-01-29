@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: message_generation
+Description: Description of message_generation
+Version: 0.2.10
+Cflags: 
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: gencpp genlisp genmsg genpy

@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: stereo_msgs
+Description: Description of stereo_msgs
+Version: 1.11.9
+Cflags: -I/apollo/third_party/ros_x86_64/include
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: message_runtime sensor_msgs std_msgs

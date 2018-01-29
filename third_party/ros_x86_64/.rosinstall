@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /apollo/third_party/ros_x86_64/setup.sh

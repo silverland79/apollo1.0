@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: rospbconvertor
+Description: Description of rospbconvertor
+Version: 1.0.0
+Cflags: 
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: 

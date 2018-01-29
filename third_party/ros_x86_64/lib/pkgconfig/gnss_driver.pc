@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: gnss_driver
+Description: Description of gnss_driver
+Version: 1.0.0
+Cflags: 
+Libs: -L/apollo/third_party/ros_x86_64/lib -l:/apollo/third_party/ros_x86_64/lib/libnodeletlib.so -l:/apollo/third_party/ros_x86_64/lib/libbondcpp.so -l:/usr/lib/x86_64-linux-gnu/libuuid.so -l:/apollo/third_party/ros_x86_64/lib/libclass_loader.so -l:/usr/lib/libPocoFoundation.so -l:/usr/lib/x86_64-linux-gnu/libdl.so -l:/apollo/third_party/ros_x86_64/lib/libroslib.so -l:/apollo/third_party/ros_x86_64/lib/librospack.so -l:/usr/lib/x86_64-linux-gnu/libpython2.7.so -l:/usr/lib/x86_64-linux-gnu/libboost_program_options.so -l:/usr/lib/x86_64-linux-gnu/libtinyxml.so -l:/apollo/third_party/ros_x86_64/lib/libroscpp.so -l:/usr/lib/x86_64-linux-gnu/libboost_signals.so -l:/usr/lib/x86_64-linux-gnu/libboost_filesystem.so -l:/apollo/third_party/ros_x86_64/lib/librosconsole.so -l:/apollo/third_party/ros_x86_64/lib/librosconsole_log4cxx.so -l:/apollo/third_party/ros_x86_64/lib/librosconsole_backend_interface.so -l:/usr/lib/liblog4cxx.so -l:/usr/lib/x86_64-linux-gnu/libboost_regex.so -l:/apollo/third_party/ros_x86_64/lib/libxmlrpcpp.so -l:/apollo/third_party/ros_x86_64/lib/libroscpp_serialization.so -l:/apollo/third_party/ros_x86_64/lib/librostime.so -l:/usr/lib/x86_64-linux-gnu/libboost_date_time.so -l:/apollo/third_party/ros_x86_64/lib/libcpp_common.so -l:/usr/lib/x86_64-linux-gnu/libboost_system.so -l:/usr/lib/x86_64-linux-gnu/libboost_thread.so -l:/usr/lib/x86_64-linux-gnu/libpthread.so -l:/usr/lib/x86_64-linux-gnu/libconsole_bridge.so -lroscpp
+Requires: roscpp std_msgs

@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: rosbag
+Description: Description of rosbag
+Version: 1.11.21
+Cflags: -I/apollo/third_party/ros_x86_64/include
+Libs: -L/apollo/third_party/ros_x86_64/lib -lrosbag
+Requires: rosbag_storage rosconsole roscpp topic_tools xmlrpcpp

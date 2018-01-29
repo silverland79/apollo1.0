@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: catkin
+Description: Description of catkin
+Version: 0.6.19
+Cflags: 
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: 

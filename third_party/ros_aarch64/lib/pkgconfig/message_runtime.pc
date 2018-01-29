@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: message_runtime
+Description: Description of message_runtime
+Version: 0.4.12
+Cflags: 
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib 
+Requires: cpp_common roscpp_serialization roscpp_traits rostime

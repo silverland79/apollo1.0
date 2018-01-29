@@ -1,0 +1,33 @@
+<launch>
+    <arg name="imu_type" default="ADIS16488" />     
+    <param name="proj4_text" value="+proj=utm +zone=10 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs " />  
+
+    <arg name="gnss_conf" default="$(find gnss_driver)/conf/gnss_novatel_conf.txt" />
+    <arg name="raw_data_topic" default="/sensor/gnss/raw_data" />
+
+    <node pkg="nodelet" type="nodelet" name="gnss_nodelet_manager"
+        args="manager" output="screen"/>
+
+    <node pkg="nodelet" type="nodelet" name="stream_nodelet"
+        args="load gnss_driver/StreamNodelet gnss_nodelet_manager" output="screen">
+        <param name="gnss_conf" value="$(arg gnss_conf)" />
+    </node>
+
+    <node pkg="nodelet" type="nodelet" name="novatel_ros_parser_nodelet"
+        args="load gnss_driver/NovatelRosParserNodelet gnss_nodelet_manager" output="screen">
+        <param name="gnss_conf" value="$(arg gnss_conf)" />
+    </node> 
+
+  <node pkg="novatel_preprocess" type="novatel_corrimu_republisher" name="novatel_corrimu_republisher_node" output="screen">
+    <param name="topic_corrimu" value="/sensor/novatel/corrimudata"/> 
+    <param name="topic_imu" value="/sensor/novatel/CorrImu"/> 
+    <param name="imu_type" value="$(arg imu_type)" /> 
+  </node>
+
+  <node pkg="novatel_preprocess" type="novatel_odometry_republisher" name="novatel_odometry_republisher_node" output="screen">
+    <param name="topic_inspva" value="/sensor/novatel/inspva"/>
+    <param name="topic_odometry" value="/sensor/novatel/Odometry"/>
+    <param name="imu_type" value="$(arg imu_type)" />
+  </node>
+
+</launch>

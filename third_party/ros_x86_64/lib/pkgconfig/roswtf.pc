@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: roswtf
+Description: Description of roswtf
+Version: 1.11.21
+Cflags: 
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: 

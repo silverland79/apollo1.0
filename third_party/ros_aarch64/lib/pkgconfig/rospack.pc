@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: rospack
+Description: Description of rospack
+Version: 2.2.8
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include -I/usr/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib -lrospack -l:/usr/lib/aarch64-linux-gnu/libpython2.7.so -l:/usr/lib/aarch64-linux-gnu/libboost_filesystem.so -l:/usr/lib/aarch64-linux-gnu/libboost_program_options.so -l:/usr/lib/aarch64-linux-gnu/libboost_system.so -l:/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib/libtinyxml.so
+Requires: 

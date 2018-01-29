@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: roslisp
+Description: Description of roslisp
+Version: 1.9.20
+Cflags: 
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: 

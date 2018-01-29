@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: nodelet
+Description: Description of nodelet
+Version: 1.9.10
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include -I/usr/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib -lnodeletlib -l:/usr/lib/aarch64-linux-gnu/libuuid.so
+Requires: bondcpp message_runtime pluginlib rosconsole roscpp std_msgs

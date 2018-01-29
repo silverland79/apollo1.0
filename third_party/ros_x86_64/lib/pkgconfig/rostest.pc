@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: rostest
+Description: Description of rostest
+Version: 1.11.21
+Cflags: -I/apollo/third_party/ros_x86_64/include -I/usr/include
+Libs: -L/apollo/third_party/ros_x86_64/lib -l:/usr/lib/x86_64-linux-gnu/libboost_system.so -l:/usr/lib/x86_64-linux-gnu/libboost_thread.so -l:/usr/lib/x86_64-linux-gnu/libpthread.so
+Requires: 

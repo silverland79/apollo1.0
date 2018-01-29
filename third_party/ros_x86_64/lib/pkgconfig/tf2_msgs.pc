@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: tf2_msgs
+Description: Description of tf2_msgs
+Version: 0.5.13
+Cflags: -I/apollo/third_party/ros_x86_64/include
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: message_generation geometry_msgs actionlib_msgs

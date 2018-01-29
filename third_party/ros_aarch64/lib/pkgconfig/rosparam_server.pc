@@ -1,0 +1,8 @@
+prefix=/home/caros/prj_build/baidu/adu-lab/apollo_/third_party/ros
+
+Name: rosparam_server
+Description: Description of rosparam_server
+Version: 1.11.21
+Cflags: 
+Libs: -L/home/caros/prj_build/baidu/adu-lab/apollo_/third_party/ros/lib 
+Requires: 

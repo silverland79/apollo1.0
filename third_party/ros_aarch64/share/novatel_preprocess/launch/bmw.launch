@@ -1,0 +1,79 @@
+<launch>
+  <arg name="ip" default="192.168.10.4" />
+  <arg name="port" default="2000" />
+  <arg name="serialport" default="/dev/ttyS0" />
+  <arg name="baudrate" default="115200" />
+  <arg name="pc_filename" default="/home/newton/mgps.bin" />
+  <arg name="onboard_filename" default="gps.bin" />
+  <arg name="porttype" default="0" />
+  <arg name="imu_type" default="fsas" />
+
+  <node name="novatel_span_driver" pkg="novatel_span_driver" type="driver">
+    <param name="ip" value="$(arg ip)" />
+    <param name="port" value="$(arg port)" />
+    <param name="serialport" value="$(arg serialport)" />
+    <param name="baudrate" value="$(arg baudrate)" />
+    <param name="filename" value="$(arg pc_filename)" />
+    <param name="onboard_filename" value="$(arg onboard_filename)" />
+    <param name="imu_type" value="$(arg imu_type)" />
+# port type:   0 for socket ;  1 for serial
+    <param name="porttype" value="$(arg porttype)" />
+    <rosparam ns="configuration">
+      log_request:
+        bestposb: ontime 1.0 0.2
+        inspvaxb: ontime 1.0 0.7
+        inspvab: ontime 0.01
+        rawimub: ontime 0.01
+        mark1pvab: onnew
+#        RANGECMPB: ONTIME 1.0
+#        RAWIMUB: ONNEW
+#        RAWEPHEMB: ONCHANGED
+#        GLOEPHEMERISB: ONCHANGED
+#        IMUTOANTOFFSETSB: ONCHANGED
+#        VEHICLEBODYROTATIONB: ONCHANGED
+      postprocess_log:
+        RANGECMPB: ONTIME 1.0
+        RAWIMUB: ONNEW
+        RAWEPHEMB: ONCHANGED
+        GLOEPHEMERISB: ONCHANGED
+        IMUTOANTOFFSETSB: ONCHANGED
+        VEHICLEBODYROTATIONB: ONCHANGED
+        MARK1PVAB: ONNEW
+        INSPVAB : ONTIME 0.05
+      login_commands:
+        GPRMC: LOG COM2 GPRMC ONTIME 1.0 0.25
+        MARK2ENABLE: EVENTOUTCONTROL MARK2 ENABLE POSITIVE 999999990 10
+        MARK1ENABLE: EVENTOUTCONTROL MARK1 ENABLE POSITIVE 50000000 50000000
+      logout_commands:
+        MARK2DISABLE: EVENTOUTCONTROL MARK2 DISABLE
+        MARK1DISABLE: EVENTOUTCONTROL MARK1 DISABLE
+        FILECLOSE: LOGFILE CLOSE
+    </rosparam>
+
+    <!-- Whether or not the driver should publish a TF, and what frames it should
+         be between. This configuration publishes odom -> base_link. -->
+    <param name="publish_tf" value="true" />
+    <param name="odom_frame" value="odom" />
+    <param name="base_frame" value="base_link" />
+
+    <!-- IMU rate; controls scaling of the imu/data topic values. This is a
+         function of the underlying hardware IMU rate, which is 100Hz for IMU-CPT. -->
+    <param name="rate" value="100" />
+
+    <!-- Disable this if you don't want SPAN to use wheel encoder data. Remap the odom
+         topic if your encoders publish elsewhere. -->
+    <param name="enable_wheel_velocity" value="false" />
+
+    <!-- Disable this if you'd like the Odometry to be absolute within the UTM zone
+         rather than starting from an arbitrary zero origin. -->
+    <param name="zero_start" value="true" />
+    <remap from="/novatel_data/bestpos" to="/dusensor/novatel/bestpos" />
+    <remap from="/novatel_data/ack" to="/dusensor/novatel/ack" />
+    <remap from="/novatel_data/corrimudata" to="/dusensor/novatel/corrimudata" />
+    <remap from="/novatel_data/inscov" to="/dusensor/novatel/inscov" />
+    <remap from="/novatel_data/inspva" to="/dusensor/novatel/inspva" />
+    <remap from="/novatel_data/inspvax" to="/dusensor/novatel/inspvax" />
+    <remap from="/novatel_data/mark1pva" to="/dusensor/novatel/mark1pva" />
+    <remap from="/novatel_data/rawimu" to="/dusensor/novatel/rawimu" />
+  </node>
+</launch>

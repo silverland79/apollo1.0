@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: message_filters
+Description: Description of message_filters
+Version: 1.11.21
+Cflags: -I/apollo/third_party/ros_x86_64/include
+Libs: -L/apollo/third_party/ros_x86_64/lib -lmessage_filters
+Requires: roscpp xmlrpcpp rosconsole

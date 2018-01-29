@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: genmsg
+Description: Description of genmsg
+Version: 0.5.8
+Cflags: 
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: 

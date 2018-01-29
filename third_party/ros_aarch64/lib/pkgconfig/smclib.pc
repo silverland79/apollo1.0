@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: smclib
+Description: Description of smclib
+Version: 1.7.19
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib 
+Requires: 

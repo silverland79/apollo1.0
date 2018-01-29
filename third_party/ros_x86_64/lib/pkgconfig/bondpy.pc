@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: bondpy
+Description: Description of bondpy
+Version: 1.7.19
+Cflags: 
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: 

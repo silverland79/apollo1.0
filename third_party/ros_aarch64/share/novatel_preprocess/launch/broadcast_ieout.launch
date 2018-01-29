@@ -1,0 +1,22 @@
+<launch>
+  <arg name="folder" default="" />
+  <arg name="child_frame_id" default="novatel" />
+  <arg name="bag" default="$(arg folder)/rosbag.bag" />
+  <arg name="ieout" default="$(arg folder)/ieout" />
+  <arg name="velodyne_extrinsics" default="$(arg folder)/velodyne_novatel_extrinsics.yaml" />
+  <arg name="camera_extrinsics" default="$(arg folder)/camera_velodyne_extrinsics.yaml" />
+
+  <arg name="rate" default="1" />
+  <arg name="start" default="0" />
+  <arg name="hint" default="hint" />
+<!--
+  <node pkg="novatel_preprocess" type="extrinsics_broadcaster.py"
+      args="$(arg velodyne_extrinsics)" name="velodyne_extrinsics_broadcaster" />
+-->
+  <node pkg="novatel_preprocess" type="ieout_broadcaster.py"
+      name="ieout_broadcaster" output="screen">
+    <remap from="hint" to="$(arg hint)" />
+    <param name="ieout" value="$(arg ieout)" />
+    <param name="child_frame_id" value="$(arg child_frame_id)" />
+  </node>
+</launch>

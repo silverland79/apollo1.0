@@ -1,0 +1,14 @@
+Metadata-Version: 1.1
+Name: rospbconvertor
+Version: 1.0.0
+Summary: rospbconvertor used to transform Std::String to pb mseesage.
+Home-page: UNKNOWN
+Author: Apollo Authors
+Author-email: info@apollo.auto
+License: Licensed under the Apache License, Version 2.0
+Description: UNKNOWN
+Platform: UNKNOWN
+Requires: genmsg
+Requires: genpy
+Requires: roslib
+Requires: rospkg

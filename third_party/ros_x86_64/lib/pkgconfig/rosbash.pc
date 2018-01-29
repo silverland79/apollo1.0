@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: rosbash
+Description: Description of rosbash
+Version: 1.11.14
+Cflags: 
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: 

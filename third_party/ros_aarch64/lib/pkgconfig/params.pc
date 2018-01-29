@@ -1,0 +1,8 @@
+prefix=/home/caros/prj/baidu/adu-lab/apollo/third_party/ros
+
+Name: params
+Description: Description of params
+Version: 1.3.0
+Cflags: 
+Libs: -L/home/caros/prj/baidu/adu-lab/apollo/third_party/ros/lib 
+Requires: 

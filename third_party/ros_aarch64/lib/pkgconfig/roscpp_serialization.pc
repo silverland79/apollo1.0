@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: roscpp_serialization
+Description: Description of roscpp_serialization
+Version: 0.5.8
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib -lroscpp_serialization
+Requires: cpp_common roscpp_traits rostime

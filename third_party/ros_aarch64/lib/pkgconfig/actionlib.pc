@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: actionlib
+Description: Description of actionlib
+Version: 1.11.5
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include -I/usr/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib -lactionlib -l:/usr/lib/aarch64-linux-gnu/libboost_thread.so -l:/usr/lib/aarch64-linux-gnu/libboost_chrono.so -l:/usr/lib/aarch64-linux-gnu/libboost_system.so -l:/usr/lib/aarch64-linux-gnu/libboost_date_time.so -l:/usr/lib/aarch64-linux-gnu/libboost_atomic.so -l:/usr/lib/aarch64-linux-gnu/libpthread.so
+Requires: actionlib_msgs message_runtime roscpp std_msgs

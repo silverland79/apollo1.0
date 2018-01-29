@@ -1,0 +1,30 @@
+# TODO: modified ros-base code need be integrated into BUILD.
+# Here it uses *.so as a temporary workaround.
+
+package(default_visibility = ["//visibility:public"])
+
+licenses(["notice"])
+
+cc_library(
+    name = "ros_common",
+    srcs = [
+        "lib/libcpp_common.so",
+        "lib/libfastcdr.so.1",
+        "lib/libfastrtps.so.1",
+        "lib/librosconsole.so",
+        "lib/librosconsole_backend_interface.so",
+        "lib/librosconsole_print.so",
+        "lib/libroscpp.so",
+        "lib/libroscpp_serialization.so",
+        "lib/librostime.so",
+        "lib/libxmlrpcpp.so",
+    ],
+    hdrs = glob([
+        "include/*/*.h",
+    ]),
+    includes = ["include"],
+    linkopts = [
+        "-lrt",
+        "-lboost_system",
+    ],
+)

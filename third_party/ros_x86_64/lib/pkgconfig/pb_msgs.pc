@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: pb_msgs
+Description: Description of pb_msgs
+Version: 1.0.0
+Cflags: -I/apollo/third_party/ros_x86_64/include
+Libs: -L/apollo/third_party/ros_x86_64/lib -lpb_msgs_proto
+Requires: genmsg gencpp genpy

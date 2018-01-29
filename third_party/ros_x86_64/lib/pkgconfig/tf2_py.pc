@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: tf2_py
+Description: Description of tf2_py
+Version: 0.5.13
+Cflags: 
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: rospy tf2

@@ -1,0 +1,29 @@
+<launch>
+  <arg name="filename" default="" />
+  <arg name="port" default="/dev/ttyS0" />
+  <arg name="baudrate" default="115200" />
+  <!-- Start the novatel node -->
+  <node pkg="novatel_preprocess" type="novatel_receiver" name="novatel_receiver" output="screen"
+      required="true">
+    <!-- Configure how to connect to the novatel -->
+    <param name="port" value="$(arg port)"/>
+    <param name="baudrate" value="$(arg baudrate)" />
+    <param name="output_file" value="$(arg filename)"/> 
+    <param name="message_stamp_type" value="gps"/> 
+
+    <!-- Commands for ports not connected to the present roscore -->
+    <!-- <param name="configure_port" value="COM2,9600,RTCM,NONE" /> -->
+
+    <!-- <param name="log_commands" value="" /> -->
+    <param name="log_commands"
+     value="COM2 GPRMC ONTIME 1.0 0.25; INSPVAB ONTIME 0.05; RAWIMUB ONTIME 1; INSCOVB ONTIME 1.0; FILE RANGECMPB ONTIME 1.0; FILE RAWIMUB ONNEW; FILE RAWEPHEMB ONCHANGED; FILE GLOEPHEMERISB ONCHANGED; FILE IMUTOANTOFFSETSB ONCHANGED; FILE VEHICLEBODYROTATIONB ONCHANGED; FILE MARK1PVAB ONNEW; FILE INSPVAB ONTIME 0.05" />
+
+    <!-- true/false to log ephem ONNEW -->
+    <param name="ephem_log" value="false" />
+    <param name="gps_default_logs_period" value="0" />
+    <param name="span_default_logs_period" value="0" />
+    <param name="range_default_logs_period" value="0" />
+    <param name="psrpos_default_logs_period" value="0" />
+  </node>
+
+</launch>

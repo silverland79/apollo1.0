@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: roscpp
+Description: Description of roscpp
+Version: 1.11.21
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include -I/usr/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib -lroscpp -lpthread -l:/usr/lib/aarch64-linux-gnu/libboost_signals.so -l:/usr/lib/aarch64-linux-gnu/libboost_filesystem.so -l:/usr/lib/aarch64-linux-gnu/libboost_system.so
+Requires: cpp_common message_runtime rosconsole roscpp_serialization roscpp_traits rosgraph_msgs rostime std_msgs xmlrpcpp

@@ -1,0 +1,20 @@
+(cl:defpackage std_srvs-srv
+  (:use )
+  (:export
+   "TRIGGER"
+   "<TRIGGER-REQUEST>"
+   "TRIGGER-REQUEST"
+   "<TRIGGER-RESPONSE>"
+   "TRIGGER-RESPONSE"
+   "SETBOOL"
+   "<SETBOOL-REQUEST>"
+   "SETBOOL-REQUEST"
+   "<SETBOOL-RESPONSE>"
+   "SETBOOL-RESPONSE"
+   "EMPTY"
+   "<EMPTY-REQUEST>"
+   "EMPTY-REQUEST"
+   "<EMPTY-RESPONSE>"
+   "EMPTY-RESPONSE"
+  ))
+

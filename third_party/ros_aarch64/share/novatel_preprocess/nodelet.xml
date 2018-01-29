@@ -1,0 +1,9 @@
+<library path="lib/libnovatel_odometry_republisher_nodelet">
+  <class name="novatel_preprocess/OdometryRepublisherNodelet"
+         type="novatel_data::OdometryRepublisherNodelet"
+         base_class_type="nodelet::Nodelet">
+    <description> 
+      Convert inspva to odometry and publish.
+    </description>
+  </class>
+</library>

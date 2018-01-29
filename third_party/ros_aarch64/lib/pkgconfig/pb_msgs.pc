@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: pb_msgs
+Description: Description of pb_msgs
+Version: 0.5.10
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib -lpb_msgs_proto
+Requires: genmsg gencpp genpy

@@ -1,0 +1,8 @@
+prefix=/home/ubuntu/baidu/adu-lab/apollo/third_party/ros
+
+Name: tf2
+Description: Description of tf2
+Version: 0.5.13
+Cflags: -I/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/include -I/usr/local/include
+Libs: -L/home/ubuntu/baidu/adu-lab/apollo/third_party/ros/lib -ltf2 -l:/usr/local/lib/libconsole_bridge.so
+Requires: geometry_msgs tf2_msgs rostime

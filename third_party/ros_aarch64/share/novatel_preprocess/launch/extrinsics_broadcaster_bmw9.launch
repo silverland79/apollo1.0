@@ -1,0 +1,14 @@
+<launch>
+    <arg name="translate_x" default="-0.03897696738875555"/>
+    <arg name="translate_y" default="1.331719975996034"/>
+    <arg name="translate_z" default="0"/>
+    <arg name="rotation_x" default="-0.004704412399480298"/>
+    <arg name="rotation_y" default="0.01030396693941595"/>
+    <arg name="rotation_z" default="0.7174580890447796"/>
+    <arg name="rotation_w" default="0.6965095744018887"/>
+    <arg name="frame_id" default="novatel"/>
+    <arg name="child_frame_id" default="velodyne"/>
+    <arg name="node_name" default="static_transform"/>
+    <node pkg="tf2_ros" type="static_transform_publisher" name="$(arg node_name)"
+        args="$(arg translate_x) $(arg translate_y) $(arg translate_z) $(arg rotation_x) $(arg rotation_y) $(arg rotation_z) $(arg rotation_w) $(arg frame_id) $(arg child_frame_id)" />     
+</launch>

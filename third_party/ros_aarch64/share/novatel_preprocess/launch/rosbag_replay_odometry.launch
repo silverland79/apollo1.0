@@ -1,0 +1,31 @@
+ <launch>
+  <!-- start rosbag replay -->
+  <include file="$(find velodyne_pointcloud)/launch/rosbag_replay.launch">
+    <arg name="rate" default="1" />
+    <arg name="start" default="0" />
+    <arg name="bag" default="/home/work/sensor/sensor_20151202/sensor_20151202-153916_/idl.bag"/>
+  </include> 
+    
+  <param name="use_sim_time" value="true" />
+  <param name="proj4_text"
+         value="+proj=utm +zone=50 +ellps=WGS84 +towgs84=0,0,0,0,0,0,0 +units=m +no_defs " />
+  <param name="srid" value="23870" />
+
+  <arg name="extrinsics" default="$(find velodyne_pointcloud)/params/velodyne_novatel_extrinsics_bmw8.yaml"/>
+  <node pkg="novatel_preprocess" type="extrinsics_broadcaster.py"
+    args="$(arg extrinsics)" name="extrinsics_broadcaster" />
+
+  <node pkg="novatel_preprocess" type="novatel_rawimu_republisher" name="novatel_rawimu_republisher_node" output="screen">  
+    <remap from="/novatel_data/rawimu" to="/DuSensor/novatel_data/rawimu"/>
+  </node>
+
+ <node pkg="novatel_preprocess" type="novatel_odometry_republisher" name="novatel_odometry_republisher_node" output="screen">
+    <remap from="/novatel_data/inspva" to="/DuSensor/novatel_data/inspva"/>
+    <remap from="/novatel_data/inscov" to="/DuSensor/novatel_data/inscov"/>
+  </node>
+
+  <node pkg="novatel_preprocess" type="inspva_broadcaster" name="inspva_broadcaster_node">
+        <remap from="/pose_with_covariance_stamped_odometry" to="/novatel_driver/inspva_pose_with_covariance_stamped_odometry"/>
+  </node>
+
+</launch>

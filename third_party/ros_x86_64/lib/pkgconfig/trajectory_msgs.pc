@@ -1,0 +1,8 @@
+prefix=/apollo/third_party/ros_x86_64
+
+Name: trajectory_msgs
+Description: Description of trajectory_msgs
+Version: 1.11.9
+Cflags: -I/apollo/third_party/ros_x86_64/include
+Libs: -L/apollo/third_party/ros_x86_64/lib 
+Requires: message_runtime std_msgs geometry_msgs
